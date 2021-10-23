@@ -33,17 +33,10 @@ namespace RotateImage
         static void Main(string[] args)
         {
             var matrix = new[,] {{5, 1, 9, 11}, {2, 4, 8, 10}, {13, 3, 6, 7}, {15, 14, 12, 16}};
-            var result = Solution.Rotate(matrix);
 
-            for (int i = 0; i < result.GetLength(0); i++)
-            {
-                for (int j = 0; j < result.GetLength(1); j++)
-                {
-                    Console.Write($"{result[i,j]}, ");
-                }
-                Console.WriteLine();
-            }
-            
+            Console.WriteLine(Solution.Rotate(matrix)==new[,]{{15,13,2,5},{14,3,4,1},{12,6,8,9},{16,7,10,11}});
+
+
             //Console.WriteLine("Hello World!");
         }
     }
